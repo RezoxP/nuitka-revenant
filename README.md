@@ -259,6 +259,16 @@ Issues and pull requests are welcome. The most useful reports include:
 
 Please remove secrets and unrelated proprietary code before sharing a sample.
 
+## Donations
+
+If you want to support the project and its continued development:
+
+- **BTC:** `bc1qa36fz0726e858l6enj7pt3359j20z98npl3av0`
+- **LTC:** `ltc1qpszucslm3zyq2caemrrxr6dxx7kh28nx7xrgpc`
+- **ETH:** `0x8541027655a7DfC7150F9bc9E603300048AeE022`
+
+Crypto transfers are irreversible. Please verify the address and network before sending.
+
 ## License
 
 Released under the MIT License. See `LICENSE`.
