@@ -83,6 +83,15 @@ def main(args_list: Optional[List[str]] = None) -> int:
         parser.print_help()
         return 0
 
+    # Dynamic resource auto-tuning for reliability
+    if target and os.path.isfile(target):
+        from .dynamic.auto_tuner import DynamicAutoTuner
+        profile = DynamicAutoTuner.calculate_analysis_profile(target)
+        if not getattr(args, 'live_max_funcs', None):
+            args.live_max_funcs = profile['live_max_funcs']
+        if not getattr(args, 'live_max_bytes', None):
+            args.live_max_bytes = profile['live_max_bytes']
+
     # Delegate to nuitka_decompiler module execution logic
     try:
         import nuitka_decompiler
