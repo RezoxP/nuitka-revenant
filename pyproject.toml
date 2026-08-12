@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nuitka-revenant"
+version = "2.1.0"
+description = "Static Nuitka decompiler - native code back to readable Python"
+readme = "README.md"
+authors = [{ name = "dimareverse" }]
+license = { text = "MIT" }
+requires-python = ">=3.8"
+dependencies = [
+    "pefile>=2024.8.26",
+    "capstone>=5.0.0",
+    "zstandard>=0.21.0",
+    "xdis>=6.0.0"
+]
+
+[project.scripts]
+nuitka-revenant = "nuitka_revenant.cli:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = "test_*.py"

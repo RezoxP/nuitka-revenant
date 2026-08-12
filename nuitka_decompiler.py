@@ -74017,6 +74017,10 @@ DYNAMIC mode : authorized lab instrumentation of a running or auto-launched
                      help='Seconds to wait for the hook dump (default: 120)')
 
     args = parser.parse_args()
+    return _legacy_main_with_args(args)
+
+
+def _legacy_main_with_args(args):
     _ndl_set_aggressive_heuristics(
         getattr(args, 'aggressive_heuristics', False)
         or _NDL_AGGRESSIVE_HEURISTICS)
